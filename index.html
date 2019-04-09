@@ -2,7 +2,8 @@
 <head>
 <script>
 function clickHandler() {
-  setTimeout(function(){ alert("Hello"); }, 10000);
+  // setTimeout(function(){ alert("Hello"); }, 10000);
+  Notification.requestPermission(function (outcome) {});
 }
 </script>
 </head>

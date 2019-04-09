@@ -1,9 +1,11 @@
 <html>
 <head>
 <script>
-function clickHandler() {
-  // setTimeout(function(){ alert("Hello"); }, 10000);
+function requestPermission() {
   Notification.requestPermission(function (outcome) {});
+}
+function clickHandler() {
+  setTimeout(requestPermission, 10000);
 }
 </script>
 </head>

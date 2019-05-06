@@ -4,14 +4,21 @@
 function requestPermission() {
   Notification.requestPermission(function (outcome) {});
 }
+
+function requestFullscreen() {
+  document.getElementById("TheButton").requestFullscreen();
+}
+
 function clickHandler() {
+  setTimeout(requestFullscreen, 1000);
   setTimeout(requestPermission, 10000);
 }
+
 </script>
 </head>
 <body>
 
-<input type="button" value="Click me!" onclick="clickHandler()"/>
+<input type="button" value="Click me!" onclick="clickHandler()" id="TheButton"/>
 
 </body>
 </html>

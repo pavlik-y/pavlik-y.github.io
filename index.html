@@ -5,8 +5,20 @@ function requestPermission() {
   Notification.requestPermission(function (outcome) {});
 }
 
+function requestFullscreenForElement(elem) {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { /* Firefox */
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+}
+
 function requestFullscreen() {
-  document.getElementById("bbb_video").requestFullscreen();
+  requestFullscreenForElement(document.getElementById("bbb_video"));
 }
 
 function clickHandler() {

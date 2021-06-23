@@ -8,8 +8,11 @@
         document.getElementById("username").value = "elmo";
         document.getElementById("password").value = "NomNom";
       }
+      function openPopup() {
+        window.open("https://example.com", "", "");
+      }
       function triggerPopup() {
-        window.open("./index.html");
+        window.setInterval("openPopup()", 1000);
       }
     </script>
   </head>

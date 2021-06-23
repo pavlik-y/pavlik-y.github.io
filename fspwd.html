@@ -11,14 +11,11 @@
       function openPopup() {
         window.open("https://example.com", "", "");
       }
-      function triggerPopup() {
-        window.setInterval("openPopup()", 1000);
-      }
+      window.setTimeout("openPopup()", 5000);
     </script>
   </head>
   <body>
     <button type="button" onclick="enterFullscreen()">Enter fullscreen</button>
-    <button type="button" onclick="triggerPopup()">Trigger popup</button>
     <form action="fspwd.html" method="POST">
       Username: <input type="text" name="username" id="username"> <br>
       Password: <input type="password" name="password" id="password"> <br>

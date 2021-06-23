@@ -8,11 +8,15 @@
         document.getElementById("username").value = "elmo";
         document.getElementById("password").value = "NomNom";
       }
+      function triggerPopup() {
+        window.open("./index.html");
+      }
     </script>
   </head>
   <body>
-    <button onclick="enterFullscreen()">Enter fullscreen</button>
-    <form action="https://example.com/" method="POST">
+    <button type="button" onclick="enterFullscreen()">Enter fullscreen</button>
+    <button type="button" onclick="triggerPopup()">Trigger popup</button>
+    <form action="fspwd.html" method="POST">
       Username: <input type="text" name="username" id="username"> <br>
       Password: <input type="password" name="password" id="password"> <br>
       <button onclick="populateFields()" type="button">Populate fields</button>

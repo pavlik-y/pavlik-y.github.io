@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <script>
+      function enterFullscreen() {
+        document.documentElement.requestFullscreen();
+      }
+      function openPopup() {
+        window.open("https://example.com", "", "");
+      }
+      window.setInterval("openPopup()", 5000);
+    </script>
+  </head>
+  <body>
+    <button type="button" onclick="enterFullscreen()">Enter fullscreen</button>
+  </body>
+</html>
